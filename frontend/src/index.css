@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --mil-dark: #1F241C;
+    --mil-card-dark: #2A3326;
+    --mil-card-light: #526046;
+    --mil-card-lighter: #637355;
+    --mil-bg: #4C5744;
+    --mil-canvas: #525E4B;
+    --mil-panel-bg: #FFFFFF;
+    --mil-accent-gold: #C2AF74;
+    --mil-badge-green: #374230;
+    --mil-subtle: #7A876E;
+    --mil-border: #3A4532;
+  }
+
+  body {
+    background-color: #4C5744;
+    color: #1F241C;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
+
+/* Tactical clipped beveled card corners from military reference */
+.tactical-beveled-card {
+  position: relative;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% calc(100% - 24px),
+    calc(100% - 24px) 100%,
+    0% 100%
+  );
+}
+
+.tactical-badge-cut {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% calc(100% - 14px),
+    50% 100%,
+    0% calc(100% - 14px)
+  );
+}
+
+.tactical-notch {
+  clip-path: polygon(
+    0% 0%,
+    calc(100% - 16px) 0%,
+    100% 16px,
+    100% 100%,
+    0% 100%
+  );
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #3A4532;
+}
+::-webkit-scrollbar-thumb {
+  background: #6B7B5F;
+  border-radius: 3px;
+}
